@@ -1,0 +1,16 @@
+@use './header-theme.scss';
+
+:host {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+header {
+    width: 100%;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    // width: 100%;
+}

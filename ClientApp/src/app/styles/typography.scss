@@ -1,0 +1,52 @@
+@use "sass:map";
+@use './fonts' as *;
+
+h1 {
+    font-family: 'Nunito';
+    font-size: 3rem;
+    font-weight: map.get($font-weights, "bold");
+}
+
+h2 {
+    font-family: 'Nunito';
+    font-size: 3rem;
+    font-weight: map.get($font-weights, "bold");
+}
+
+h3 {
+    font-family: 'Nunito';
+    font-size: 2.5rem;
+    font-weight: map.get($font-weights, "medium");
+}
+
+h4 {
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: map.get($font-weights, "medium");
+}
+
+p {
+    font-family: 'Lato';
+    font-size: 1rem;
+    font-weight: map.get($font-weights, "medium");
+}
+
+a {
+    font-family: 'Lato';
+    font-size: 1.1rem;
+    font-weight: map.get($font-weights, "medium");
+
+    text-decoration: none;
+    opacity: 0.9;
+
+    &:hover {
+        text-decoration: underline;
+        opacity: 1;
+    }
+}
+
+span>.fancy {
+    font-family: 'Rochester';
+    font-size: 1.5rem;
+    font-weight: map.get($font-weights, "light");
+}

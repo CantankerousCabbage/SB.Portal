@@ -1,0 +1,35 @@
+$themes: (
+    light: (
+       text: black,
+       background-color: white,
+       primary-color: rgb(110, 156, 224),
+       secondary-color:  rgb(245, 243, 121),
+       success-color: green,
+       danger-color: red,
+       warning-color: orange,
+       panel-opacity: 0.6,
+
+    ),
+    dark: (
+       text: white,
+       background-color: black,
+       primary-color:  rgb(33, 49, 104),
+       secondary-color: rgb(92, 93, 94),      
+       success-color: green,
+       danger-color: red,
+       warning-color: orange,
+       panel-opacity: 0.6,
+    )
+);
+
+@mixin themify($themes) {
+  @each $name, $values in $themes {
+    .#{$name}-theme {
+      $theme-map: $values !global;
+      @content;
+    }
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
